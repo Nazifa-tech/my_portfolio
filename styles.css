@@ -148,16 +148,12 @@ footer {
   }
 }
 
-.Certification {
-  width: max(1000px);
-  height: max(500px);
-}
-.portfolio {
-  width: max(1000px);
-  height: max(500px);
-}
-
+.Certification,
+.portfolio,
 .landing_page {
-  width: max(1000px);
-  height: max(500px);
+  width: 100%;
+  max-width: 1000px;  
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
