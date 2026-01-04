@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+  background: #f4f6f8;
+  color: #333;
+  line-height: 1.6;
+}
+
+nav {
+  background: #0f172a;
+  color: #fff;
+  padding: 15px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  font-size: 1.5rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500px;
+}
+
+.nav-links a:hover {
+  color: #38bdf8;
+}
+
+.hero {
+  height: 90vh;
+  background: linear-gradient(120deg, #0f172a, #1e293b);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+}
+
+hero h1 {
+  font-size: 3rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #cbd5f5;
+}
+
+section {
+  padding: 60px 8%;
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.about {
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.skill-bar {
+  background: #e5e7eb;
+  border-radius: 10px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.skill-bar span {
+  display: block;
+  height: 10px;
+  background: linear-gradient(90deg, #38bdf8, #0ea5e9);
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card img {
+  transition: transform 0.3s ease;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+.projects img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+#Contact .card {
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
+}
+
+footer {
+  background: #0f172a;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+
+  .nav-links {
+    margin-top: 10px;
+  }
+}
+
+.Certification {
+  width: max(1000px);
+  height: max(500px);
+}
+.portfolio {
+  width: max(1000px);
+  height: max(500px);
+}
+
+.landing_page {
+  width: max(1000px);
+  height: max(500px);
+}
