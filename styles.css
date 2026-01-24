@@ -165,7 +165,6 @@ footer {
   margin: 0 auto;
 }
 
-/* STAR BACKGROUND */
 .stars,
 .stars2,
 .stars3 {
@@ -178,7 +177,7 @@ footer {
   z-index: -1;
 }
 
-/* Small bright stars */
+
 .stars {
   background-image: radial-gradient(2px 2px at 20px 30px, #ffffff, transparent),
                     radial-gradient(2px 2px at 40px 70px, #ffffff, transparent),
@@ -189,7 +188,6 @@ footer {
   opacity: 0.9;
 }
 
-/* Medium stars */
 .stars2 {
   background-image: radial-gradient(3px 3px at 50px 100px, #e0f7ff, transparent),
                     radial-gradient(3px 3px at 150px 200px, #e0f7ff, transparent),
@@ -199,7 +197,6 @@ footer {
   opacity: 0.7;
 }
 
-/* Big glowing stars */
 .stars3 {
   background-image: radial-gradient(4px 4px at 100px 150px, #ffffff, transparent),
                     radial-gradient(4px 4px at 300px 250px, #ffffff, transparent);
@@ -209,7 +206,6 @@ footer {
   filter: drop-shadow(0 0 6px white);
 }
 
-/* Animation */
 @keyframes moveStars {
   from {
     transform: translateY(0);
@@ -291,5 +287,91 @@ footer {
   100% {
     transform: translateY(-100px);
     opacity: 0.4;
+  }
+}
+/* Make body dark like space */
+body {
+  margin: 0;
+  background: radial-gradient(ellipse at bottom, #0d1b2a 0%, #000 100%);
+  overflow-x: hidden;
+  color: white;
+  position: relative;
+}
+
+/* STAR LAYERS */
+.stars, .stars2, .stars3 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: repeat;
+  z-index: -1;
+}
+
+/* Small stars */
+.stars {
+  background-image: radial-gradient(1px 1px at 20px 30px, white, transparent),
+                    radial-gradient(1px 1px at 50px 80px, white, transparent),
+                    radial-gradient(1px 1px at 90px 120px, white, transparent);
+  background-size: 200px 200px;
+  animation: moveStars 100s linear infinite;
+}
+
+/* Medium stars */
+.stars2 {
+  background-image: radial-gradient(2px 2px at 40px 60px, #ccc, transparent),
+                    radial-gradient(2px 2px at 120px 150px, #ccc, transparent);
+  background-size: 300px 300px;
+  animation: moveStars 150s linear infinite;
+}
+
+/* Big stars */
+.stars3 {
+  background-image: radial-gradient(3px 3px at 100px 200px, #aaa, transparent);
+  background-size: 400px 400px;
+  animation: moveStars 200s linear infinite;
+}
+
+/* Shooting stars */
+.shooting-stars span {
+  position: fixed;
+  top: -10px;
+  left: 50%;
+  width: 2px;
+  height: 80px;
+  background: linear-gradient(white, transparent);
+  animation: shooting 3s linear infinite;
+  z-index: -1;
+}
+
+.shooting-stars span:nth-child(2) {
+  left: 70%;
+  animation-delay: 1s;
+}
+
+.shooting-stars span:nth-child(3) {
+  left: 30%;
+  animation-delay: 2s;
+}
+
+/* Animations */
+@keyframes moveStars {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-1000px);
+  }
+}
+
+@keyframes shooting {
+  from {
+    transform: translateY(0) rotate(45deg);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100vh) rotate(45deg);
+    opacity: 0;
   }
 }
